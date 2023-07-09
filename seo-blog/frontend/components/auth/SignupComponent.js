@@ -1,12 +1,13 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { signup, isAuth } from '../../actions/auth';
 import Router from 'next/router';
 
 const SignupComponent = () => {
     const [values, setValues] = useState({
-        name: 'Ryan',
-        email: 'ryan@gmail.com',
-        password: 'rrrrrr',
+        name: 'Abhinav',
+        email: 'abhinavdixit2306@gmail.com',
+        password: '111111',
         error: '',
         loading: false,
         message: '',
