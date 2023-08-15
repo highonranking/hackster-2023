@@ -27,10 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/admin.js"
     ],
-    "/admin/crud/category-tag": [
+    "/blogs": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/admin/crud/category-tag.js"
+      "static/chunks/pages/blogs.js"
     ]
   },
   "ampFirstPages": []
