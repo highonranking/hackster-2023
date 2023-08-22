@@ -1,0 +1,128 @@
+# Query: <Link
+# Flags: CaseSensitive WordMatch RegExp
+# ContextLines: 1
+
+28 results - 11 files
+
+seo-blog\frontend\components\Header.js:
+  37        <Navbar color="light" light expand="md">
+  38:         <Link legacyBehavior href="/">
+  39            <NavLink className="font-weight-bold">{APP_NAME}</NavLink>
+
+  45                <NavItem>
+  46:                 <Link legacyBehavior href="/blogs">
+  47                    <NavLink>Blogs</NavLink>
+
+  54                  <NavItem>
+  55:                   <Link legacyBehavior href="/signin">
+  56                      <NavLink>Signin</NavLink>
+
+  59                  <NavItem>
+  60:                   <Link legacyBehavior href="/signup">
+  61                      <NavLink>Signup</NavLink>
+
+  68                <NavItem>
+  69:                 <Link legacyBehavior href="/user">
+  70                    <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
+
+  76                <NavItem>
+  77:                 <Link legacyBehavior href="/admin">
+  78                    <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
+
+  94              <NavItem>
+  95:               <Link legacyBehavior href="/user/crud/create">
+  96                  <NavLink className="btn btn-primary text-light">
+
+seo-blog\frontend\components\blog\Card.js:
+   8      blog.categories.map((c, i) => (
+   9:       <Link legacyBehavior key={i} href={`/categories/${c.slug}`}>
+  10          <a className="btn btn-primary mr-1 ml-1 mt-3">{c.name}</a>
+
+  15      blog.tags.map((t, i) => (
+  16:       <Link legacyBehavior key={i} href={`/tags/${t.slug}`}>
+  17          <a className="btn btn-outline-primary mr-1 ml-1 mt-3">{t.name}</a>
+
+  23        <header>
+  24:         <Link legacyBehavior href={`/blogs/${blog.slug}`}>
+  25            <a>
+
+  56              <div className="pb-3">{renderHTML(blog.excerpt)}</div>
+  57:             <Link legacyBehavior href={`/blogs/${blog.slug}`}>
+  58                <a className="btn btn-primary pt-2">Read more</a>
+
+seo-blog\frontend\components\blog\Search.js:
+  45              <div key={i}>
+  46:               <Link href={`/blogs/${blog.slug}`}>
+  47                  <a className="text-primary">{blog.title}</a>
+
+seo-blog\frontend\components\blog\SmallCard.js:
+   9        <section>
+  10:         <Link legacyBehavior href={`/blogs/${blog.slug}`}>
+  11            <a>
+
+  23          <section>
+  24:           <Link legacyBehavior href={`/blogs/${blog.slug}`}>
+  25              <a>
+
+  34          Posted {moment(blog.updatedAt).fromNow()} by{" "}
+  35:         <Link legacyBehavior href={`/`}>
+  36            <a className="float-right">{blog.postedBy.name}</a>
+
+seo-blog\frontend\components\crud\BlogRead.js:
+  48        return (
+  49:         <Link legacyBehavior href={`/user/crud/${blog.slug}`}>
+  50            <a className="btn btn-sm btn-warning">Update</a>
+
+  54        return (
+  55:         <Link legacyBehavior href={`/admin/crud/${blog.slug}`}>
+  56            <a className="ml-2 btn btn-sm btn-warning">Update</a>
+
+seo-blog\frontend\pages\index.js:
+  7              <h2>Index page</h2>
+  8:             <Link legacyBehavior href="/signup">
+  9                  <a>Signup</a>
+
+seo-blog\frontend\pages\admin\index.js:
+  16                  <li className="list-group-item">
+  17:                   <Link legacyBehavior href="/admin/crud/category-tag">
+  18                      <a>Create Category</a>
+
+  22                  <li className="list-group-item">
+  23:                   <Link legacyBehavior href="/admin/crud/category-tag">
+  24                      <a>Create Tag</a>
+
+  32                  <li className="list-group-item">
+  33:                   <Link legacyBehavior href="/admin/crud/blogs">
+  34                      <a>Update/Delete Blog</a>
+
+  38                  <li className="list-group-item">
+  39:                   <Link  legacyBehavior href="/user/update">
+  40                      <a>Update Profile</a>
+
+seo-blog\frontend\pages\blogs\[slug].js:
+  53      blog.categories.map((c, i) => (
+  54:       <Link legacyBehavior key={i} href={`/categories/${c.slug}`}>
+  55          <a className="btn btn-primary mr-1 ml-1 mt-3">{c.name}</a>
+
+  60      blog.tags.map((t, i) => (
+  61:       <Link legacyBehavior key={i} href={`/tags/${t.slug}`}>
+  62          <a className="btn btn-outline-primary mr-1 ml-1 mt-3">{t.name}</a>
+
+seo-blog\frontend\pages\blogs\index.js:
+   95      return categories.map((c, i) => (
+   96:       <Link legacyBehavior href={`/categories/${c.slug}`} key={i}>
+   97          <a className="btn btn-primary mr-1 ml-1 mt-3">{c.name}</a>
+
+  103      return tags.map((t, i) => (
+  104:       <Link legacyBehavior href={`/tags/${t.slug}`} key={i}>
+  105          <a className="btn btn-outline-primary mr-1 ml-1 mt-3">{t.name}</a>
+
+seo-blog\frontend\pages\profile\[username].js:
+  38          <div className="mt-4 mb-4" key={i}>
+  39:           <Link legacyBehavior href={`/blogs/${blog.slug}`}>
+  40              <a className="lead">{blog.title}</a>
+
+seo-blog\frontend\pages\user\index.js:
+  20                                  <li className="list-group-item">
+  21:                                     <Link legacyBehavior href="/user/crud/blogs">
+  22                                          <a>Update/Delete Blog</a>

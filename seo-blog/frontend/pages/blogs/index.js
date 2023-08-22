@@ -1,5 +1,5 @@
-import Head from "next/head";
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import Layout from "../../components/Layout";
@@ -43,7 +43,7 @@ const Blogs = ({
       />
       <meta
         property="og:image:secure_url"
-        ccontent={`${DOMAIN}/static/images/seoblog.jpg`}
+        content={`${DOMAIN}/static/images/seoblog.jpg`}
       />
       <meta property="og:image:type" content="image/jpg" />
       <meta property="fb:app_id" content={`${FB_APP_ID}`} />
@@ -73,7 +73,7 @@ const Blogs = ({
       size > 0 &&
       size >= limit && (
         <button onClick={loadMore} className="btn btn-outline-primary btn-lg">
-          Load mmore
+          Load more
         </button>
       )
     );

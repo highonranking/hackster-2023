@@ -81,9 +81,9 @@ const Tag = () => {
         setValues({
           ...values,
           error: false,
-          success: true,
+          success: false,
           name: "",
-          removed: "",
+          removed: !removed,
           reload: !reload,
         });
       }

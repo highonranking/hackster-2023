@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+
 import Link from "next/link";
 import Router from "next/router";
 import NProgress from "nprogress";
@@ -18,8 +18,8 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
-
 import ".././node_modules/nprogress/nprogress.css";
+import Search from "./blog/Search";
 
 Router.onRouteChangeStart = (url) => NProgress.start();
 Router.onRouteChangeComplete = (url) => NProgress.done();
@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <Navbar color="light" light expand="md">
         <Link legacyBehavior href="/">
           <NavLink className="font-weight-bold">{APP_NAME}</NavLink>
@@ -41,6 +41,14 @@ const Header = () => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
+            <React.Fragment>
+              <NavItem>
+                <Link legacyBehavior href="/blogs">
+                  <NavLink>Blogs</NavLink>
+                </Link>
+              </NavItem>
+            </React.Fragment>
+
             {!isAuth() && (
               <React.Fragment>
                 <NavItem>
@@ -54,17 +62,6 @@ const Header = () => {
                   </Link>
                 </NavItem>
               </React.Fragment>
-            )}
-
-            {isAuth() && (
-              <NavItem>
-                <NavLink
-                  style={{ cursor: "pointer" }}
-                  onClick={() => signout(() => Router.replace(`/signin`))}
-                >
-                  Signout
-                </NavLink>
-              </NavItem>
             )}
 
             {isAuth() && isAuth().role === 0 && (
@@ -82,10 +79,30 @@ const Header = () => {
                 </Link>
               </NavItem>
             )}
+
+            {isAuth() && (
+              <NavItem>
+                <NavLink
+                  style={{ cursor: "pointer" }}
+                  onClick={() => signout(() => Router.replace(`/signin`))}
+                >
+                  Signout
+                </NavLink>
+              </NavItem>
+            )}
+
+            <NavItem>
+              <Link legacyBehavior href="/user/crud/blog">
+                <NavLink className="btn btn-primary text-light">
+                  Write a blog
+                </NavLink>
+              </Link>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+      <Search />
+    </React.Fragment>
   );
 };
 
