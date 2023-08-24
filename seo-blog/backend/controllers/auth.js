@@ -34,11 +34,7 @@ exports.preSignup = (req, res) => {
             <p>https://seoblog.com</p>
         `,
     };
-    sendEmailWithNodemailer(req, res, emailData).then((sent) => {
-      return res.json({
-        message: `Email has been sent to ${email}. Follow the instructions to activate your account.`,
-      });
-    });
+    sendEmailWithNodemailer(req, res, emailData);
   });
 };
 
