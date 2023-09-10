@@ -1,14 +1,1 @@
-module.exports = {
-  publicRuntimeConfig: {
-    APP_NAME: "HOR",
-    API_DEVELOPMENT: "http://localhost:8000/api",
-    API_PRODUCTION: "http://143.110.245.245/api",
-    PRODUCTION: false,
-    DOMAIN_DEVELOPMENT: "http://localhost:3000/",
-    DOMAIN_PRODUCTION: "http://143.110.245.245",
-    FB_APP_ID: "665813695478767",
-    DISQUS_SHORTNAME: "highonranking",
-    GOOGLE_CLIENT_ID:
-      "361001628378-iv3dl8vqant2h6v7r1520q6e488m6jtu.apps.googleusercontent.com",
-  },
-};
+
